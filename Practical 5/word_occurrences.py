@@ -6,4 +6,4 @@ for word in text:
     else:
         words[word] = 1
 for word, count in words.items():
-    print(f"{word}: {count}")
+    print(f"{word:13}: {count}")
