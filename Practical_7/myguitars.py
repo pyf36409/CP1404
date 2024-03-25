@@ -4,7 +4,7 @@ from Practical_7.guitar import Guitar
 
 def main():
     guitars = []
-    in_file = open("guitars.csv", "r", newline='')
+    in_file = open("guitars.csv", "r", newline="")
     in_file.readline()
     reader = csv.reader(in_file)
     for line in reader:
@@ -27,7 +27,7 @@ def main():
     sorted_guitars = sorted(guitars)
     for guitar in sorted_guitars:
         print(guitar.name)
-    in_file = open("guitars.csv", "w", newline='')
+    in_file = open("guitars.csv", "w", newline="")
     for guitar in sorted_guitars:
         data = [guitar.name, guitar.year, guitar.cost]
         writer = csv.writer(in_file)
