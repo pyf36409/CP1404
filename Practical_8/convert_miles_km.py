@@ -15,21 +15,25 @@ class MilesConvertApp(App):
             result = float(value) * 1.60934
             self.root.ids.output_label.text = str(result)
         except ValueError:
-            pass
+            self.root.ids.output_label.text = str("0.0")
 
     def up(self, value):
+        if value == "":
+            value = 0
         try:
             result = int(value) + 1
             self.root.ids.input_number.text = str(result)
         except ValueError:
-            pass
+            self.root.ids.output_label.text = str("0.0")
 
     def down(self, value):
+        if value == "":
+            value = 0
         try:
             result = int(value) - 1
             self.root.ids.input_number.text = str(result)
         except ValueError:
-            pass
+            self.root.ids.output_label.text = str("0.0")
 
 
 MilesConvertApp().run()
