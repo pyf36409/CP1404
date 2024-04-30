@@ -66,3 +66,13 @@ doctest.testmod()
 # and one more you decide (one that is valid!)
 # test this and watch the tests fail
 # then write the body of the function so that the tests pass
+
+
+def name(small):
+    """
+    >>> name("hello")
+    False
+    >>> name("Hello.")
+    True
+    """
+    return small[0].isupper() and small[-1] == "."
